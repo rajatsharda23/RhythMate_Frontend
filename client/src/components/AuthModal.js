@@ -17,6 +17,8 @@ const AuthModal = ({setShowModal, isSignup}) => {
 
     let navigate = useNavigate()
 
+    console.log('changes incoming!')
+
     const handleSubmit = async (e) => {
         e.preventDefault()
         console.log('hi')
@@ -27,7 +29,7 @@ const AuthModal = ({setShowModal, isSignup}) => {
             }
             setLowerEmail(email.toLowerCase())
             // console.log(email, '->', lowerEmail)
-            const response = await axios.post(`${BASE_API_ADD}/${isSignup? 'signup' : 'login'}`, {email, password})
+            const response = await axios.post(`https://rhythmate-backend.onrender.com/${isSignup? 'signup' : 'login'}`, {email, password})
             // console.log(response.data)
             // console.log('hi')
             setCookie('AuthToken', response.data.token)
