@@ -55,7 +55,7 @@ const ChatHeader = ({ user }) => {
 
                     <div className='relative mt-3 mr-3'>
                         {/* <button className='font-readex p-2 bg-green-500 text-green-100 rounded-full disabled:text-gray-500' onClick={spotifyCall} disabled={cookies.Code} >{cookies.Code?'Logged In':'Spotify'}</button> */}
-                        {!cookies.AccessToken && <a className="font-readex p-2 bg-green-500 text-green-100 rounded-full " href='http://localhost:8000/authenticate' >Spotify</a>}
+                        {!cookies.AccessToken && <a className="font-readex p-2 bg-green-500 text-green-100 rounded-full " href='https://rhythmate-backend.onrender.com/authenticate' >Spotify</a>}
                     </div>
                 </div>
                 
